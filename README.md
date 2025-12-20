@@ -1,6 +1,6 @@
 # ActionSheet
 
-ActionSheet project adds support for android ActionSheet widget.
+ActionSheet project adds support for ActionSheet widget.
 
 ## Installation
 To install the plugin use:
