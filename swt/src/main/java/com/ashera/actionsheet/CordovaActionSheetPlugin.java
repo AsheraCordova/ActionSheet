@@ -128,7 +128,7 @@ public class CordovaActionSheetPlugin extends CordovaPlugin {
 
 			@Override
 			public void onCancel() {
-				boolean hasCancelButton = addCancelButtonWithLabel != null && addCancelButtonWithLabel.isEmpty();
+				boolean hasCancelButton = addCancelButtonWithLabel != null && !addCancelButtonWithLabel.isEmpty();
 				callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, hasCancelButton ? btns.size() + 1 : -1));
 			}
 		}, parentFragmentId, addCancelButtonWithLabel, titleTextColor, titleBackgroundColor, titleFontFamily,

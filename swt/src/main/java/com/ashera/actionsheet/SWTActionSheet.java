@@ -70,7 +70,7 @@ public class SWTActionSheet {
 //        layout.verticalSpacing = 12;
 		sheet.setLayout(layout);
 
-		if (title != null) {
+		if (title != null && !title.isEmpty()) {
 			Label lblTitle = new Label(sheet, SWT.CENTER);
 			lblTitle.setText(title);
 			lblTitle.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));

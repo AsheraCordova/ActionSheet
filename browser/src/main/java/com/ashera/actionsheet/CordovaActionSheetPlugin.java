@@ -182,7 +182,7 @@ public class CordovaActionSheetPlugin extends CordovaPlugin {
 					parentFragmentId);
 		}
 
-		boolean hasCancelButton = addCancelButtonWithLabel != null && addCancelButtonWithLabel.isEmpty();
+		boolean hasCancelButton = addCancelButtonWithLabel != null && !addCancelButtonWithLabel.isEmpty();
 		if (hasCancelButton) {
 			HTMLElement btn = document.createElement("button");
 			btn.setAttribute("value", position + "");

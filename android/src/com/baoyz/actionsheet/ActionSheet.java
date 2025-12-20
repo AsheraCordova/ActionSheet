@@ -355,33 +355,35 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
                 }
             }
         }
-        Button bt = new Button(getActivity());
-        bt.setAllCaps(false);
-        bt.getPaint().setFakeBoldText(true);
-
-        bt.setId(ActionSheet.CANCEL_BUTTON_ID);
-        bt.setBackground(this.getCancelButtonBackground());
-        bt.setText(getCancelButtonTitle());
-        bt.setTextColor(this.getCancelButtonTextColor());
-        bt.setOnClickListener(this);
-
-        bt.setTextColor(this.getCancelTextColor());
-        bt.setTextSize(TypedValue.COMPLEX_UNIT_PX, this.getCancelTextSize());
-        if (getCancelHighlightTint() != null && getCancelBackgroundTint() != null) {
-            // Define the state sets
-            ColorStateList colorStateList = getColorStateList(getCancelHighlightTint(), getCancelBackgroundTint());
-            bt.setBackgroundTintList(colorStateList);
+        if (getCancelButtonTitle() != null && !getCancelButtonTitle().isEmpty()) {
+	        Button bt = new Button(getActivity());
+	        bt.setAllCaps(false);
+	        bt.getPaint().setFakeBoldText(true);
+	
+	        bt.setId(ActionSheet.CANCEL_BUTTON_ID);
+	        bt.setBackground(this.getCancelButtonBackground());
+	        bt.setText(getCancelButtonTitle());
+	        bt.setTextColor(this.getCancelButtonTextColor());
+	        bt.setOnClickListener(this);
+	
+	        bt.setTextColor(this.getCancelTextColor());
+	        bt.setTextSize(TypedValue.COMPLEX_UNIT_PX, this.getCancelTextSize());
+	        if (getCancelHighlightTint() != null && getCancelBackgroundTint() != null) {
+	            // Define the state sets
+	            ColorStateList colorStateList = getColorStateList(getCancelHighlightTint(), getCancelBackgroundTint());
+	            bt.setBackgroundTintList(colorStateList);
+	        }
+	        else if (getCancelBackgroundTint() != null) {
+	            bt.setBackgroundTintList(ColorStateList.valueOf(getCancelBackgroundTint()));
+	        }
+	        Typeface titleFontFamily = getCancelFontFamily();
+	        if (titleFontFamily != null) {
+	            bt.setTypeface(titleFontFamily);
+	        }
+	        LinearLayout.LayoutParams params = createButtonLayoutParams();
+	        params.topMargin = this.getCancelButtonMarginTop();
+	        mPanel.addView(bt, params);
         }
-        else if (getCancelBackgroundTint() != null) {
-            bt.setBackgroundTintList(ColorStateList.valueOf(getCancelBackgroundTint()));
-        }
-        Typeface titleFontFamily = getCancelFontFamily();
-        if (titleFontFamily != null) {
-            bt.setTypeface(titleFontFamily);
-        }
-        LinearLayout.LayoutParams params = createButtonLayoutParams();
-        params.topMargin = this.getCancelButtonMarginTop();
-        mPanel.addView(bt, params);
 
         mPanel.setBackground(this.getBackground());
         mPanel.setPadding(this.getPadding(), this.getPadding(), this.getPadding(), this.getPadding());

@@ -27,17 +27,17 @@
      <source-file src="android/src/com/baoyz/actionsheet/ActionSheet.java" target-dir="src/com/baoyz/actionsheet"/>
      <!-- src end -->
      <!-- start res -->
-     <source-file src="android/res/drawable/actionsheet_bg_ios6.9.png" target-dir="res/drawable"/>
-     <source-file src="android/res/drawable/actionsheet_bottom_normal.9.png" target-dir="res/drawable"/>
-     <source-file src="android/res/drawable/actionsheet_bottom_pressed.9.png" target-dir="res/drawable"/>
-     <source-file src="android/res/drawable/actionsheet_cancel_bt_bg.9.png" target-dir="res/drawable"/>
-     <source-file src="android/res/drawable/actionsheet_middle_normal.9.png" target-dir="res/drawable"/>
-     <source-file src="android/res/drawable/actionsheet_middle_pressed.9.png" target-dir="res/drawable"/>
-     <source-file src="android/res/drawable/actionsheet_other_bt_bg.9.png" target-dir="res/drawable"/>
-     <source-file src="android/res/drawable/actionsheet_single_normal.9.png" target-dir="res/drawable"/>
-     <source-file src="android/res/drawable/actionsheet_single_pressed.9.png" target-dir="res/drawable"/>
-     <source-file src="android/res/drawable/actionsheet_top_normal.9.png" target-dir="res/drawable"/>
-     <source-file src="android/res/drawable/actionsheet_top_pressed.9.png" target-dir="res/drawable"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_bg_ios6.9.png" target-dir="res/drawable-xhdpi"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_bottom_normal.9.png" target-dir="res/drawable-xhdpi"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_bottom_pressed.9.png" target-dir="res/drawable-xhdpi"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_cancel_bt_bg.9.png" target-dir="res/drawable-xhdpi"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_middle_normal.9.png" target-dir="res/drawable-xhdpi"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_middle_pressed.9.png" target-dir="res/drawable-xhdpi"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_other_bt_bg.9.png" target-dir="res/drawable-xhdpi"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_single_normal.9.png" target-dir="res/drawable-xhdpi"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_single_pressed.9.png" target-dir="res/drawable-xhdpi"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_top_normal.9.png" target-dir="res/drawable-xhdpi"/>
+     <source-file src="android/res/drawable-xhdpi/actionsheet_top_pressed.9.png" target-dir="res/drawable-xhdpi"/>
      <source-file src="android/res/drawable/slt_as_ios7_cancel_bt.xml" target-dir="res/drawable"/>
      <source-file src="android/res/drawable/slt_as_ios7_other_bt_bottom.xml" target-dir="res/drawable"/>
      <source-file src="android/res/drawable/slt_as_ios7_other_bt_middle.xml" target-dir="res/drawable"/>

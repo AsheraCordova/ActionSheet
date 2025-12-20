@@ -233,7 +233,7 @@ public class CordovaActionSheetPlugin extends CordovaPlugin {
 				builder.setListener(new com.baoyz.actionsheet.ActionSheet.ActionSheetListener() {
 					@Override
 					public void onDismiss(com.baoyz.actionsheet.ActionSheet actionSheet, boolean isCancel) {
-						boolean hasCancelButton = addCancelButtonWithLabel != null && addCancelButtonWithLabel.isEmpty();
+						boolean hasCancelButton = addCancelButtonWithLabel != null && !addCancelButtonWithLabel.isEmpty();
 						callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, hasCancelButton ? btns.size() + 1 : -1));
 					}
 
