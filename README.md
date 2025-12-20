@@ -1,6 +1,6 @@
 # ActionSheet
 
-Toolbar project adds support for android Toolbar widget.
+ActionSheet project adds support for android ActionSheet widget.
 
 ## Installation
 To install the plugin use:
