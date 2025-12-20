@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.actionsheet.ios"
+        version="1.0">
+
+  <name>CordovaActionSheetPlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaActionSheetPluginx">
+        	<param name="ios-package" value="CordovaActionSheetPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/src/ActionSheetPlugin.h" target-dir="ActionSheet/ios/src"/>
+     <source-file src="ios/src/ActionSheetPlugin.m" target-dir="ActionSheet/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CordovaActionSheetPlugin.h" target-dir="ActionSheet/ios/src"/>
+     <source-file src="ios/src/CordovaActionSheetPlugin.m" target-dir="ActionSheet/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/IBActionSheet.h" target-dir="ActionSheet/ios/src"/>
+     <source-file src="ios/src/IBActionSheet.m" target-dir="ActionSheet/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+
+     <!-- tsc end -->
+  </platform>
+
+</plugin>

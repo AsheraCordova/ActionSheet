@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.actionsheet"
+        version="1.0">
+
+  <name>CordovaActionSheetPlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <js-module src="android/www/ActionSheet.js" name="ActionSheet">
+    <clobbers target="window.plugins.actionsheet"/>
+  </js-module>
+  
+  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaActionSheetPlugin">
+        <param name="android-package" value="com.ashera.actionsheet.CordovaActionSheetPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="android/src/com/ashera/actionsheet/CordovaActionSheetPlugin.java" target-dir="src/com/ashera/actionsheet"/>
+     <source-file src="android/src/com/baoyz/actionsheet/ActionSheet.java" target-dir="src/com/baoyz/actionsheet"/>
+     <!-- src end -->
+     <!-- start res -->
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_bg_ios6.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_bottom_normal.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_bottom_pressed.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_cancel_bt_bg.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_middle_normal.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_middle_pressed.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_other_bt_bg.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_single_normal.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_single_pressed.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_top_normal.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/actionsheet_top_pressed.9.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable/slt_as_ios7_cancel_bt.xml" target-dir="res/drawable"/>
+     <source-file src="android/res/drawable/slt_as_ios7_other_bt_bottom.xml" target-dir="res/drawable"/>
+     <source-file src="android/res/drawable/slt_as_ios7_other_bt_middle.xml" target-dir="res/drawable"/>
+     <source-file src="android/res/drawable/slt_as_ios7_other_bt_single.xml" target-dir="res/drawable"/>
+     <source-file src="android/res/drawable/slt_as_ios7_other_bt_top.xml" target-dir="res/drawable"/>
+     <!-- res end -->
+     <!-- start tsc -->
+
+     <!-- tsc end -->
+  </platform>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaActionSheetPluginx">
+        	<param name="ios-package" value="CordovaActionSheetPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/ios/src/ActionSheetPlugin.h" target-dir="ActionSheet/ios/src"/>
+     <source-file src="ios/ios/src/ActionSheetPlugin.m" target-dir="ActionSheet/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/CordovaActionSheetPlugin.h" target-dir="ActionSheet/ios/src"/>
+     <source-file src="ios/ios/src/CordovaActionSheetPlugin.m" target-dir="ActionSheet/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/IBActionSheet.h" target-dir="ActionSheet/ios/src"/>
+     <source-file src="ios/ios/src/IBActionSheet.m" target-dir="ActionSheet/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+
+     <!-- tsc end -->
+  </platform>
+  <platform name="browser">
+    <config-file target="config.xml" parent="/*">
+      <feature name="CordovaActionSheetPlugin">
+        <param name="android-package" value="com.ashera.actionsheet.CordovaActionSheetPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+	<framework src="browser/core.gradle" custom="true" type="gradleReference" />
+	<asset src="browser/www/css/actionsheet.css" target="css/actionsheet.css" />
+   	<js-module src="browser/www/js/add_res.js" name="actionsheetAddRes">
+    	 <runs/>
+  	</js-module>
+   	 <!-- start src -->
+     <!-- src end -->
+     <!-- start res -->
+     <!-- res end -->
+     <!-- start tsc -->
+     <!-- tsc end -->
+  </platform>
+  <platform name="swt">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaActionSheetPlugin">
+        <param name="android-package" value="com.ashera.actionsheet.CordovaActionSheetPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+	<framework src="swt/core.gradle" custom="true" type="gradleReference" />
+   	 <!-- start src -->
+     <!-- src end -->
+     <!-- start res -->
+     <!-- res end -->
+     <!-- start tsc -->
+     <!-- tsc end -->
+  </platform>
+
+
+
+
+
+</plugin>
