@@ -123,7 +123,7 @@ public class CordovaActionSheetPlugin extends CordovaPlugin {
 		SWTActionSheet.show(parentShell, title, btns.toArray(new String[0]), 2, new ActionSheetListener() {
 			@Override
 			public void onSelect(int index, String title) {
-				callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, index));
+				callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, index + 1));
 			}
 
 			@Override
