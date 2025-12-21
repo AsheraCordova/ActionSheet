@@ -162,6 +162,11 @@ public class CordovaActionSheetPlugin extends CordovaPlugin {
 			}
 			customizeHtmlElement(titleElement, titleTextColor, titleBackgroundColor, "", titleFontFamily, titleTextSize,
 					parentFragmentId);
+			
+			titleElement.addEventListener("click", (e) -> {
+				e.preventDefault();
+				e.stopPropagation();
+			});
 		}
 
 		for (int i = 0; i < btns.size(); i++) {
