@@ -110,6 +110,10 @@ CGRect adjustedScreenBounds()
     self = [self init];
     self.delegate = delegate;
     
+    if (otherTitlesArray == nil) {
+    	otherTitlesArray = [NSArray new];
+    }
+    
     NSMutableArray* titles = [otherTitlesArray mutableCopy];
     
     if (destructiveTitle) {
@@ -136,7 +140,7 @@ CGRect adjustedScreenBounds()
         [self.buttons addObject:cancelButton];
         self.hasCancelButton = YES;
     } else {
-        self.shouldCancelOnTouch = NO;
+        //self.shouldCancelOnTouch = NO;
         self.hasCancelButton = NO;
     }
     
@@ -212,7 +216,7 @@ CGRect adjustedScreenBounds()
     if (self.hasCancelButton) {
         self.cancelButtonIndex = self.buttons.count - 1;
     } else {
-        self.cancelButtonIndex = -1;
+        self.cancelButtonIndex = -2;
     }
     
     [self setUpTheActions];
@@ -239,6 +243,10 @@ CGRect adjustedScreenBounds()
     
     self = [self init];
     self.callback = callback;
+    
+	if (otherTitlesArray == nil) {
+    	otherTitlesArray = [NSArray new];
+    }
     
     NSMutableArray* titles = [otherTitlesArray mutableCopy];
     

@@ -125,7 +125,7 @@ public class CordovaActionSheetPlugin extends CordovaPlugin {
 								parentFragmentId)
 						.setOtherButtonTitles(btns.toArray(new String[0])).setCancelableOnTouchOutside(true);
 
-				if (title != null) {
+				if (title != null && !title.isEmpty()) {
 					builder.setTitle(title);
 				}
 				if (addCancelButtonWithLabel != null) {

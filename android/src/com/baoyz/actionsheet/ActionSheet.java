@@ -134,17 +134,19 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
     private ViewGroup mGroup;
     private View mBg;
     private boolean isCancel = true;
+    private FragmentManager fragmentManager;
 
     public void show(final FragmentManager manager, final String tag) {
         if (!mDismissed || manager.isDestroyed()) {
             return;
         }
+        this.fragmentManager = manager;
         mDismissed = false;
         new Handler().post(new Runnable() {
             public void run() {
                 FragmentTransaction ft = manager.beginTransaction();
                 ft.add(ActionSheet.this, tag);
-                ft.addToBackStack(null);
+                //ft.addToBackStack(null);
                 ft.commitAllowingStateLoss();
             }
         });
@@ -157,8 +159,8 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
         mDismissed = true;
         new Handler().post(new Runnable() {
             public void run() {
-                getFragmentManager().popBackStack();
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                //ActionSheet.this.fragmentManager.popBackStack();
+                FragmentTransaction ft = ActionSheet.this.fragmentManager.beginTransaction();
                 ft.remove(ActionSheet.this);
                 ft.commitAllowingStateLoss();
             }
@@ -751,7 +753,7 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
             }
 
             if (titleTextSize == -1) {
-                titleTextSize = sp2px(16);;
+                titleTextSize = sp2px(16);
             }
 
             if (titlePadding == -1) {
@@ -767,15 +769,15 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
             }
 
             if (cancelTextSize == -1) {
-                cancelTextSize = sp2px(16);;
+                cancelTextSize = sp2px(16);
             }
 
             if (otherTextSize == -1) {
-                otherTextSize = sp2px(16);;
+                otherTextSize = sp2px(16);
             }
 
             if (destructiveTextSize == -1) {
-                destructiveTextSize = sp2px(16);;
+                destructiveTextSize = sp2px(16);
             }
 
             bundle.putString(ARG_BG, background);
